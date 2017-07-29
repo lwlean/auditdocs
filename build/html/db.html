@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>审核系统说明文档 &mdash; auditdoc 1.0 documentation</title>
+  <title>1. 数据库表结构 &mdash; auditdoc 1.0 documentation</title>
   
 
   
@@ -33,8 +33,9 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="auditdoc 1.0 documentation" href="#"/>
-        <link rel="next" title="1. 数据库表结构" href="db.html"/> 
+    <link rel="top" title="auditdoc 1.0 documentation" href="index.html"/>
+        <link rel="next" title="2. 文档参照模板" href="sample.html"/>
+        <link rel="prev" title="审核系统说明文档" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -52,7 +53,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> auditdoc
+            <a href="index.html" class="icon icon-home"> auditdoc
           
 
           
@@ -83,8 +84,12 @@
           
             
             
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="db.html">1. 数据库表结构</a></li>
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. 数据库表结构</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#audit-users">1.1. audit_users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#audit-cost">1.2. audit_cost</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="sample.html">2. 模板参考</a></li>
 </ul>
 
@@ -99,7 +104,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">auditdoc</a>
+        <a href="index.html">auditdoc</a>
       </nav>
 
 
@@ -114,13 +119,13 @@
 
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="#">Docs</a> &raquo;</li>
+    <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>审核系统说明文档</li>
+    <li>1. 数据库表结构</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/db.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -130,31 +135,92 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>审核系统说明文档<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>Audit审核系统初衷是为了审核自己的各项申请项目，目前主要功能改为记录生活消费和记录日记等，以后也会逐渐增加分析和统计记录，测试api等功能，用来练习。此次文档模型参考 <a class="reference external" href="http://docs.pythontab.com/python/python3.4/index.html">Python3中文手册</a> ,但是真正内容由自己编写，使用手册参考 <a class="reference external" href="http://zh-sphinx-doc.readthedocs.io/en/latest/markup/inline.html">Sphinx使用手册</a> ，通过编写此文档，发现和学习新框架是类似的，需要仿照API就可以作出自己的东西，然而深层次的东西，同样需要自己去多查多学习。</p>
+  <div class="section" id="database-label">
+<span id="id1"></span><h1>1. 数据库表结构<a class="headerlink" href="#database-label" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="db.html">1. 数据库表结构</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="db.html#audit-users">1.1. audit_users</a></li>
-<li class="toctree-l2"><a class="reference internal" href="db.html#audit-cost">1.2. audit_cost</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">2. 模板参考</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#users">2.1. users</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sample.html#section-to-cross-reference">2.2. Section to cross-reference</a></li>
-</ul>
-</li>
-</ul>
 </div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="audit-users">
+<span id="audit-users-label"></span><h2>1.1. audit_users<a class="headerlink" href="#audit-users" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+<li>用户登录的相关信息</li>
 </ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="29%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">列名</th>
+<th class="head">类型</th>
+<th class="head">是否必填</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>id</td>
+<td>int</td>
+<td>是</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>String</td>
+<td>是</td>
+</tr>
+<tr class="row-even"><td>passwd</td>
+<td>String</td>
+<td>是</td>
+</tr>
+<tr class="row-odd"><td>sex</td>
+<td>String</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="audit-cost">
+<span id="audit-cost-label"></span><h2>1.2. audit_cost<a class="headerlink" href="#audit-cost" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>每日消费情况，包括消费金额，消费时间，消费内容，消费类型，消费描述</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="29%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">列名</th>
+<th class="head">类型</th>
+<th class="head">是否必填</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>id</td>
+<td>int</td>
+<td>是</td>
+</tr>
+<tr class="row-odd"><td>event</td>
+<td>String</td>
+<td>是</td>
+</tr>
+<tr class="row-even"><td>time</td>
+<td>data</td>
+<td>是</td>
+</tr>
+<tr class="row-odd"><td>cost</td>
+<td>float</td>
+<td>是</td>
+</tr>
+<tr class="row-even"><td>type</td>
+<td>String</td>
+<td>是</td>
+</tr>
+<tr class="row-odd"><td>describe</td>
+<td>String</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -164,8 +230,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="db.html" class="btn btn-neutral float-right" title="1. 数据库表结构" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="sample.html" class="btn btn-neutral float-right" title="2. 文档参照模板" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+      
+        <a href="index.html" class="btn btn-neutral" title="审核系统说明文档" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -6,11 +6,17 @@
 审核系统说明文档
 =================================
 
+Audit审核系统初衷是为了审核自己的各项申请项目，目前主要功能改为记录生活消费和记录日记等，以后也会逐渐增加分析和统计记录，测试api等功能，用来练习。此次文档模型参考 `Python3中文手册 <http://docs.pythontab.com/python/python3.4/index.html>`_ ,但是真正内容由自己编写，使用手册参考 `Sphinx使用手册 <http://zh-sphinx-doc.readthedocs.io/en/latest/markup/inline.html>`_ ，通过编写此文档，发现和学习新框架是类似的，需要仿照API就可以作出自己的东西，然而深层次的东西，同样需要自己去多查多学习。
+
+
+
 .. toctree::
    :maxdepth: 2
-   :caption: 审核系统设计文档
+   :numbered:
 
 
+   db
+   模板参考 <sample>
 
 Indices and tables
 ==================

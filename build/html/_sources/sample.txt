@@ -1,0 +1,181 @@
+文档参照模板
+==================
+
+.. _user_label:
+
+users
+---------
+
+.. note::
+
+   该功能不适于发送垃圾邮件.
+
+.. warning::
+   显示用户使用API时的注意事项. 指令包含完整的句子和标点符号. 不同于 note ，它一般显示的是信息安全方面的注意事项.
+
+.. versionadded:: 2.5
+   The *spam* parameter.
+
+.. deprecated:: 3.1
+   Use :func:`spam` instead.
+
+.. seealso::
+
+   Module :py:mod:`zipfile`
+      标准模块 :py:mod:`zipfile` 的文档.
+
+   `GNU tar manual, Basic Tar Format <http://link>`_
+      归档文件的文档, 包含 GNU tar 扩展.
+
+.. seealso:: modules :py:mod:`zipfile`, :py:mod:`tarfile`
+
+.. centered:: LICENSE AGREEMENT
+
+.. hlist::
+   :columns: 3
+
+   * 列表
+   * 的子
+   * 项会
+   * 水平
+   * 排列
+
+.. glossary::
+
+   environment
+      一个结构，包含信息是所有文档的保存路径，使用的参考文献等.
+      在解析的阶段使用，因此连续运行时仅需解析新的或修改过的文档.
+
+   source directory
+      根路径，包含子目录，包含一个Sphinx工程的所有源文件.
+
+.. glossary::
+
+   term 1
+   term 2
+      定义两个术语.
+
+.. productionlist::
+   try_stmt: try1_stmt | try2_stmt
+   try1_stmt: "try" ":" `suite`
+            : ("except" [`expression` ["," `target`]] ":" `suite`)+
+            : ["else" ":" `suite`]
+            : ["finally" ":" `suite`]
+   try2_stmt: "try" ":" `suite`
+            : "finally" ":" `suite`
+
+
+
+* 这是一个项目符号列表.
+* 它有两项.
+  第二项使用两行.
+
+1. 这是个有序列表.
+2. 也有两项.
+
+#. 是个有序列表.
+#. 也有两项.
+
+
+* 这是
+* 一个列表
+
+  * 嵌套列表
+  * 子项
+
+* 父列表继续
+
+| 这些行
+| 在源文件里
+| 被分隔的一模一样.
+
+这是一段正常文本. 下一段是代码文字::
+
+   它不需要特别处理，仅是
+   缩进就可以了.
+
+   它可以有多行.
+
+再是正常的文本段.
+
+这是一段正常文本. 下一段是代码文字::
+
+   sudo apt-get install python3.0
+
+再是正常的文本段.
+
+=====  =====  =======
+A      B      A and B
+=====  =====  =======
+False  False  False
+True   False  False
+False  True   False
+True   True   True
+=====  =====  =======
+
+
+段落里包含 `我是百度 <http://www.baidu.com>`_
+
+
+.. _my-reference-label:
+
+Section to cross-reference
+--------------------------
+
+章节内容
+
+需要引用user，查看 :ref:`user_label`.
+
+#################
+表示部分
+#################
+
+*****************
+表示章节
+*****************
+
+=================
+小章节
+=================
+
+-----------------
+小章节的子章节
+-----------------
+
+^^^^^^^^^^^^^^^^^
+子章节的子章节
+^^^^^^^^^^^^^^^^^
+
+"""""""""""""""""
+段落
+"""""""""""""""""
+
+.. 显示标记
+
+.. image:: test.jpg
+
+Lorem ipsum [#f1]_ dolor sit amet ... [#f2]_
+
+.. rubric:: Footnotes
+
+.. [#f1] 第一条尾注的文本.
+.. [#f2] 第二条尾注的文本.
+
+Lorem ipsum [Ref]_ dolor sit amet.
+
+.. [Ref] 参考文献, 书,URL 等.
+
+.. |name| replace:: replacement *text*
+
+.. |caution| image:: warning.png
+             :alt: Warning!
+
+..
+   这整个缩进块都是
+   一个评论.
+
+   仍是一个评论.
+
+.. 这是一个评论.
+
+

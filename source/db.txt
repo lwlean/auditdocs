@@ -1,0 +1,46 @@
+.. _database_label:
+
+数据库表结构
+===============
+
+.. toctree::
+       :maxdepth: 2
+    
+
+.. _audit_users_label:
+
+audit_users
+------------
+
+* 用户登录的相关信息
+
+======== ======== ========
+列名	 类型	  是否必填
+======== ======== ========
+id	 int	  是
+name	 String	  是
+passwd	 String	  是
+sex	 String	  否
+======== ======== ========
+
+
+.. _audit_cost_label:
+
+audit_cost
+--------------
+
+* 每日消费情况，包括消费金额，消费时间，消费内容，消费类型，消费描述
+
+======== ======== ========
+列名	 类型	  是否必填
+======== ======== ========
+id	 int	  是
+event	 String	  是
+time	 data	  是
+cost	 float	  是
+type	 String	  是
+describe String   否
+======== ======== ========
+
+
+
